@@ -1,4 +1,4 @@
-add_filter('wp_handle_upload_prefilter', 'custom_upload_filter' );
+add_filter('wp_handle_upload_prefilter', 'upload_sanitizer' );
 
 function upload_sanitizer( $file ){
 	$filename = explode('.', $file['name']);
